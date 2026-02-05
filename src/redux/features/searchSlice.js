@@ -59,7 +59,9 @@ const searchSlice = createSlice({
 export const {
     setSearchQuery,
     setActiveTab,
+    setPage,
     setSearchResults,
+    appendSearchResults,
     setIsLoading,
     setError,
     clearResults
