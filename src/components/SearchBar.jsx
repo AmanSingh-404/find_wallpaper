@@ -16,8 +16,8 @@ function SearchBar() {
   return (
     <div>
         <form onSubmit={submitHandler} className='flex p-10'>
-            <input value={text} onChange={(e) => setText(e.target.value)} required className='flex-1 p-2 border border-gray-300 rounded' type="text" placeholder='Search'/>
-            <button className='p-2 border border-gray-300 rounded cursor-pointer active:scale-95' type='submit'>Search</button>
+            <input value={text} onChange={(e) => setText(e.target.value)} required className='flex-1 p-2 text-white border border-gray-300 rounded' type="text" placeholder='Search'/>
+            <button className='p-2 border text-white border-gray-300 rounded cursor-pointer active:scale-95' type='submit'>Search</button>
         </form>
     </div>
   )
