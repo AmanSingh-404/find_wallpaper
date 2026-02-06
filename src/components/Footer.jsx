@@ -36,7 +36,7 @@ const Footer = () => {
                 <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
                     <p>&copy; {new Date().getFullYear()} PixelVerse. All rights reserved.</p>
                     <div className="flex items-center gap-1 mt-2 md:mt-0">
-                        Made with <Heart size={16} className="text-red-500 fill-red-500" /> by Developers
+                        Made with <Heart size={16} className="text-red-500 fill-red-500" /> by Aman
                     </div>
                 </div>
             </div>
