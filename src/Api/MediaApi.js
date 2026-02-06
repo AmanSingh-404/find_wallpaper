@@ -58,3 +58,30 @@ export async function fetchCollectionMedia(id, page = 1, per_page = 20) {
     })
     return res.data;
 }
+
+export async function fetchCuratedPhotos(page = 1, per_page = 20) {
+    const res = await axios.get('https://api.unsplash.com/photos', {
+        params: {
+            page,
+            per_page,
+            order_by: 'popular'
+        },
+        headers: {
+            Authorization: `Client-ID ${UNSPLASH_API_KEY}`
+        }
+    })
+    return { results: res.data };
+}
+
+export async function fetchPopularVideos(page = 1, per_page = 20) {
+    const res = await axios.get('https://api.pexels.com/videos/popular', {
+        params: {
+            page,
+            per_page
+        },
+        headers: {
+            Authorization: PEXELS_API_KEY
+        }
+    })
+    return res.data;
+}

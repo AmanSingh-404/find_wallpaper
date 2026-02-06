@@ -27,7 +27,10 @@ const searchSlice = createSlice({
             state.page = action.payload
         },
         setSearchResults(state, action) {
-            state.results = action.payload
+            const { type, data } = action.payload
+            if (state.results[type] !== undefined) {
+                state.results[type] = data
+            }
             state.isLoading = false
         },
         appendSearchResults(state, action) {

@@ -1,17 +1,19 @@
 import React from 'react'
-import SearchBar from './components/SearchBar'
-import Tabs from './components/Tabs'
-import ResultGrid from './components/ResultGrid'
-import MediaModal from './components/MediaModal' // Import Modal
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import MediaModal from './components/MediaModal'
 
 function App() {
     return (
-        <div className='h-screen w-full bg-black'>
-            <SearchBar />
-            <Tabs />
-            <ResultGrid />
-            <MediaModal /> {/* Render Modal */}
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/photos" element={<HomePage />} />
+                <Route path="/videos" element={<HomePage />} />
+                <Route path="/collections" element={<HomePage />} />
+            </Routes>
+            <MediaModal />
+        </Router>
     )
 }
 
